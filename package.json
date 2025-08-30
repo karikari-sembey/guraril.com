@@ -1,0 +1,25 @@
+{
+  "name": "guraril.com",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/karikari-sembey/guraril.com#readme",
+  "bugs": {
+    "url": "https://github.com/karikari-sembey/guraril.com/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karikari-sembey/guraril.com.git"
+  },
+  "license": "MIT",
+  "author": "ぐらりぃる",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build;cp favicon.ico dist/favicon.ico",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "5.13.5"
+  }
+}

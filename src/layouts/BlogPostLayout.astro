@@ -1,0 +1,22 @@
+---
+import BlogLayout from "./BlogLayout.astro";
+
+const { frontmatter } = Astro.props;
+---
+
+<style>
+    .publish-date {
+        font-size: 1rem;
+        color: gray;
+    }
+
+    h2 {
+        text-align: center;
+    }
+</style>
+
+<BlogLayout pageTitle={frontmatter.title}>
+    <p class="publish-date">{frontmatter.pubDate.slice(0, 10)}</p>
+    <h2>{frontmatter.title}</h2>
+    <slot />
+</BlogLayout>
