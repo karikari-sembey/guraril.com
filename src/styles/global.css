@@ -80,8 +80,12 @@ h2 {
     text-align: center;
 }
 
+.post-card-title {
+    margin: 0px;
+}
+
 .blog-post-card {
     border: 1px solid lightgray;
-    padding: 5px;
-    margin: 5px;
+    padding: 10px;
+    margin: 15px;
 }

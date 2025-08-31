@@ -5,7 +5,12 @@ const { frontmatter } = Astro.props;
 ---
 
 <BlogLayout pageTitle={frontmatter.title}>
-    <p class="publish-date">{frontmatter.pubDate.slice(0, 10)}</p>
+    <p class="publish-date">
+        posted on: {frontmatter.publishDate.slice(0, 10)}
+    </p>
+    <p class="updated-date">
+        updated on: {frontmatter.updatedDate.slice(0, 10)}
+    </p>
     <h2 class="post-title">{frontmatter.title}</h2>
     <slot />
 </BlogLayout>
