@@ -1,10 +1,10 @@
 ---
-import BlogLayout from "./BlogLayout.astro";
+import Layout from "./Default.astro";
 
 const { frontmatter } = Astro.props;
 ---
 
-<BlogLayout pageTitle={frontmatter.title}>
+<Layout pageTitle={frontmatter.title}>
     <p class="publish-date">
         posted on: {frontmatter.publishDate.slice(0, 10)}
     </p>
@@ -13,4 +13,4 @@ const { frontmatter } = Astro.props;
     </p>
     <h2 class="post-title">{frontmatter.title}</h2>
     <slot />
-</BlogLayout>
+</Layout>

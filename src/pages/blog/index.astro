@@ -1,12 +1,12 @@
 ---
-import BlogLayout from "../../layouts/BlogLayout.astro";
+import Layout from "../../layouts/Default.astro";
 import BlogPost from "../../components/BlogPost.astro";
 
 const pageTitle = "Blog";
 const allPosts = await Astro.glob("../blog/posts/*.md");
 ---
 
-<BlogLayout pageTitle={pageTitle}>
+<Layout pageTitle={pageTitle}>
     <h2>Blog Posts</h2>
     {
         allPosts.map((post) => (
@@ -17,4 +17,4 @@ const allPosts = await Astro.glob("../blog/posts/*.md");
             />
         ))
     }
-</BlogLayout>
+</Layout>
