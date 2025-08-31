@@ -1,15 +1,24 @@
 * {
     padding: 0;
     margin: 0;
-    background-color: #333333;
+    background-color: #252525;
     color: lightgray;
     text-align: center;
-    text-decoration: none;
 }
 
 header {
     padding-top: 25px;
     padding-bottom: 25px;
+}
+
+a {
+    color: #FFAD00
+}
+
+header *,
+.post-card-title * {
+    text-decoration: none;
+    color: lightgray;
 }
 
 p {
@@ -82,6 +91,10 @@ h2 {
 
 .post-card-title {
     margin: 0px;
+}
+
+.post-card-title * {
+    text-decoration: none;
 }
 
 .blog-post-card {
