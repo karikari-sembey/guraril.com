@@ -16,7 +16,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build;cp favicon.ico dist/favicon.ico",
+    "build": "astro build;cp",
     "preview": "astro preview"
   },
   "dependencies": {
