@@ -12,7 +12,7 @@ const allPosts = await getCollection("blog");
     {
         allPosts.map((post) => (
             <BlogPost
-                url={"blog/" + post.id}
+                url={"/blog/" + post.id}
                 title={post.data.title}
                 description={post.data.description}
             />
