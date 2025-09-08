@@ -1,0 +1,38 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Default.astro";
+import { render } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+
+export const getStaticPaths: GetStaticPaths = async () => {
+    const posts: CollectionEntry<"blog">[] = await getCollection("blog");
+    if (!posts) return [];
+    return posts.map((post) => ({
+        params: {
+            id: post.id,
+        },
+        props: {
+            title: post.data.title,
+            publishDate: post.data.publishDate,
+            updatedDate: post.data.updatedDate,
+            post,
+        },
+    }));
+};
+
+const { title, publishDate, updatedDate, post } = Astro.props;
+// TODO: エラーが出る原因を探る
+const { Content } = await render(post);
+---
+
+<Layout pageTitle={title} , pageType="blog" , pageId={post.id}>
+    <p class="publish-date">
+        posted on: {publishDate}
+    </p>
+    <p class="updated-date">
+        updated on: {updatedDate}
+    </p>
+    <h2 class="post-title">{title}</h2>
+    <Content />
+</Layout>
