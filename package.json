@@ -16,7 +16,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build;cp",
+    "build": "astro build",
     "preview": "astro preview"
   },
   "dependencies": {
