@@ -1,4 +1,4 @@
-import { defineConfig } from "astro/config";
+import { defineConfig, passthroughImageService } from "astro/config";
 
 import react from "@astrojs/react";
 
@@ -10,5 +10,9 @@ export default defineConfig({
     optimizeDeps: {
       exclude: ["@resvg/resvg-js"]
     }
-  }
+  },
+  image:
+  {
+    service: passthroughImageService(),
+  },
 });
