@@ -22,7 +22,15 @@ header *,
 }
 
 p {
-    padding: 5px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    line-height: 1.5rem;
+}
+
+blockquote * {
+    background-color: #555555;
+    padding-left: 10px;
+    border-left: lightgray solid 5px;
 }
 
 code {
@@ -37,9 +45,13 @@ ul {
     margin-left: 20px;
 }
 
-h2 {
-    margin-top: 10px;
-    margin-bottom: 10px;
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .nav-links {
@@ -71,7 +83,7 @@ h2 {
     margin: 25px;
     margin-left: auto;
     margin-right: auto;
-    padding: 20px;
+    padding: 50px;
     border: 1px solid white;
 }
 
