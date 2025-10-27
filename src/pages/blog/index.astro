@@ -10,12 +10,16 @@ const allPosts = await getCollection("blog");
 <Layout pageTitle={pageTitle} pageId="blog" pageType="blog">
     <h2>Blog Posts</h2>
     {
-        allPosts.map((post) => (
-            <BlogPost
-                url={"/blog/" + post.id}
-                title={post.data.title}
-                description={post.data.description}
-            />
-        ))
+        allPosts
+            .sort((a, b) => {
+                return a.data.publishDate < b.data.publishDate ? 1 : -1;
+            })
+            .map((post) => (
+                <BlogPost
+                    url={"/blog/" + post.id}
+                    title={post.data.title}
+                    description={post.data.description}
+                />
+            ))
     }
 </Layout>
