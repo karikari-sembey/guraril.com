@@ -25,6 +25,8 @@ p {
     margin-top: 0;
     margin-bottom: 10px;
     line-height: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 300;
 }
 
 blockquote * {
@@ -89,7 +91,8 @@ h6 {
 
 @media screen and (max-width: 850px) {
     .main-wrapper {
-        width: 90%
+        width: 85%;
+        padding: 10px;
     }
 }
 
